@@ -1,0 +1,46 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using WebAppMVC.Models
+@{
+    // viet code c#
+    string message = "hello razer!";
+    Student data = @ViewData["Data"] as Student;
+
+}
+@model Student
+@message
+</br>
+
+<h1>
+    @ViewData["message"]</br>
+    Code: @data.Code</br>
+    Name: @data.Name</br>
+    Mark: @data.Mark</br>
+</h1>
+<h1>
+    @ViewBag.Message1</br>
+    code:  @ViewBag.Data1.Code</br>
+    Name:  @ViewBag.Data1.Name</br>
+    Mark:  @ViewBag.Data1.Mark</br>
+</h1>
+
+<h1>
+    </br> truyen du lieu bang model</br>
+  
+    code:  @Model.Code</br>
+    Name:  @Model.Name</br>
+    Mark:  @Model.Mark</br>
+</h1>
+<form asp-controller="Home" asp-action="Add" method="get">
+
+
+
+
+    <input type="submit" value="Create a Student"/>
+</form>
+
+
+
+<input type="radio" name="test" value="2">2</input>

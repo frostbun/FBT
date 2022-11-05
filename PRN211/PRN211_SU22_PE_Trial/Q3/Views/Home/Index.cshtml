@@ -1,0 +1,46 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using Q3.Models
+
+List of contracts
+<form id="customer" asp-controller="Home" asp-action="Index" method="get">
+    <select name="CustomerId" onchange="change()">
+        <option value="0">SelectCustomer</option>
+        @foreach (Customer customer in ViewBag.Customers)
+        {
+            @if (customer.CustomerId == ViewBag.SelectedId)
+            {
+                <option value="@customer.CustomerId" selected>@customer.CustomerName</option>
+            }
+            else
+            {
+                <option value="@customer.CustomerId">@customer.CustomerName</option>
+            }
+        }
+    </select>
+</form>
+
+<script>
+    function change() {
+        document.getElementById("customer").submit();
+    }
+</script>
+
+<table>
+    <tr>
+        <th>Code</th>
+        <th>Customer</th>
+        <th>Employee</th>
+        <th>Type</th>
+        <th>SignedDate</th>
+    </tr>
+    @foreach (Contract contract in ViewBag.Contracts)
+    {
+        <tr>
+            <td>@contract.Code</td>
+            <td>@contract.CustomerName</td>
+            <td>@contract.EmployeeName</td>
+            <td>@contract.Type</td>
+            <td>@contract.SignedDate</td>
+        </tr>
+    }
+</table>

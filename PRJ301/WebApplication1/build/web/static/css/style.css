@@ -1,0 +1,55 @@
+:root {
+    --blue: #14375f;
+    --light-blue: #6c8299;
+    --white: #ffffff;
+    --light-red: #e24943;
+    --red: #df322b;
+}
+
+.login-form {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.login-form-bg-left {
+    background-image: url("../image/login_cover_top.jpg");
+    background-size: cover;
+}
+
+.login-form-bg-right {
+    background-image: url("../image/login_cover_bot.jpg");
+    background-size: cover;
+}
+
+.login-form-link {
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    color: var(--blue);
+    background-color: var(--light-red);
+}
+
+.btn-primary {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-secondary {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+}
+
+.text-danger {
+    color: var(--red);
+}
+
+@media all and (min-width: 768px) {
+
+    .login-form-bg-left {
+        background-image: url("../image/login_cover_left.jpg");
+    }
+
+    .login-form-bg-right {
+        background-image: url("../image/login_cover_right.jpg");
+    }
+}

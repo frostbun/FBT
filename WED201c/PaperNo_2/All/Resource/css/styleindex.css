@@ -1,0 +1,43 @@
+img {
+    margin: 10px auto;
+    width: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #3ab8e2;
+}
+
+th {
+    color: green;
+    text-align: center;
+}
+
+td {
+    color: orange;
+    text-align: center;
+}
+
+.favorite {
+    text-align: left;
+    color: orange;
+    border-bottom: 3px solid #3ab8e2;
+}
+
+.img-caption {
+    text-align: center;
+    color: white;
+    background-color: rgba(245, 170, 8, 0.15);
+    position: absolute;
+    bottom: 2%;
+    left: 3%;
+    width: 94%;
+}
+
+.footer {
+    color: white;
+    background-color: #007777;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,68 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using Asm3_PRN211_SE1632_HE163620_NguyenDucManh.Models
+
+
+@model Product
+<form asp-controller="Home" asp-action="Index" method="post">
+    <table>
+        <tr>
+            <td>Product code:</td>
+            <td>
+                <select asp-for="ProductCode" onchange="location.href='?ProductCode='+this.value">
+                @foreach (Product product in ViewBag.Products)
+                {
+                    @if (product.ProductCode == Model?.ProductCode)
+                    {
+                        <option value="@product.ProductCode" selected>@product.ProductCode</option>
+                    }
+                    else
+                    {
+                        <option value="@product.ProductCode">@product.ProductCode</option>
+                    }
+                }
+            </select> </td>
+        </tr>
+        <tr>
+            <td>ProductName:</td>
+            <td><input type="text" asp-for="ProductName" value="@Model.ProductName" /></td>
+            <td><button type="button" onclick="location.href='?ProductName='+document.getElementById('ProductName').value">Filter by Name</button></td>
+        </tr>
+        <tr>
+            <td>Unit:</td>
+            <td><input type="text" asp-for="Unit" value="@Model.Unit" /></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>
+                Old: <input type="number" step="any" asp-for="Price" value="@Model.Price" />
+                New: <input type="number" step="any" value="@Model.Price" />
+            </td>
+        </tr>
+        <tr>
+            <td>Image:</td>
+            <td><input type="text" asp-for="Image" value="@Model.Image" /></td>
+            <td><button type="button" onclick="location.href='?Image='+document.getElementById('Image').value">Filter by Image</button></td>
+        </tr>
+    </table>
+    <input type="Submit" />
+</form>
+
+<table border="1">
+    <tr>
+        <th>Ma hang</th>
+        <th>Ten hang</th>
+        <th>Don vi</th>
+        <th>Gia</th>
+        <th>Anh</th>
+    </tr>
+    @foreach (Product product in ViewBag.Products)
+    {
+        <tr>
+            <td>@product.ProductCode</td>
+            <td>@product.ProductName</td>
+            <td>@product.Unit</td>
+            <td>@product.Price</td>
+            <td>@product.Image</td>
+        </tr>
+    }
+</table>

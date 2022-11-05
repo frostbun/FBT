@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using WebApplication1.Models
+@{
+    string message = "Hello Razor!";
+    Student data = ViewData["Data"] as Student;
+}
+
+@message
+<br />
+@ViewData["Message"]
+<br />
+@ViewData["Data"]
+<br />
+Code: @data.Code,
+Name: @data.Name,
+Mark: @data.Mark

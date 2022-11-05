@@ -1,0 +1,7 @@
+dotnet ef dbcontext scaffold "Server=localhost;Database=MySaleDB;UID=sa;PWD=123" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models
+
+var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", true, true)
+                .Build();
+            return config.GetConnectionString("FinalProject");

@@ -1,0 +1,17 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using WebApplication2_EF.Models
+
+@model Product
+<form asp-controller="Product" asp-action="Add" method="post">
+    ProductName: <input type="text" asp-for="ProductName" /> <br />
+    UnitPrice: <input type="number" asp-for="UnitPrice" /> <br />
+    UnitsInStock: <input type="number" asp-for="UnitsInStock" /> <br />
+    Image: <input type="text" asp-for="Image" /> <br />
+    Category: <select asp-for="CategoryId">
+        @foreach (var item in ViewBag.Categories)
+        {
+            <option value="@item.CategoryId">@item.CategoryName</option>
+        }
+    </select> <br />
+    <input type="Submit"/>
+</form>
