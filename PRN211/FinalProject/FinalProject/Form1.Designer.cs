@@ -362,7 +362,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.calendar);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calendar";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgEvents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgNotis)).EndInit();

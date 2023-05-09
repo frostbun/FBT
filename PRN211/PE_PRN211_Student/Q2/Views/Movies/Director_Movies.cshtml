@@ -1,0 +1,52 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@using Q2.Models
+
+<h1>List of Movies</h1>
+
+<div style="display:inline-block;width:20vh;vertical-align:top;">
+    <h3>Directors</h3>
+    @foreach (Director director in ViewBag.Directors)
+    {
+        @if (director.Id == ViewBag.SelectedDirector?.Id)
+        {
+            <a asp-controller="Movies" asp-action="Director_Movies" asp-route-id="@director.Id" style="font-size:1.5rem;font-weight:bolder;">@director.FullName</a>
+        }
+        else
+        {
+            <a asp-controller="Movies" asp-action="Director_Movies" asp-route-id="@director.Id">@director.FullName</a>
+        }
+        <br />
+    }
+</div>
+
+<div style="display:inline-block;width:80vh;">
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>ReleaseDate</th>
+            <th>Description</th>
+            <th>Language</th>
+            <th>Director</th>
+            <th>Producer</th>
+            <th>Genres</th>
+        </tr>
+        @foreach (Movie movie in ViewBag.Movies)
+        {
+            <tr>
+                <td>@movie.Title</td>
+                <td>@movie.ReleaseDate</td>
+                <td>@movie.Description</td>
+                <td>@movie.Language</td>
+                <td>@movie.Director?.FullName</td>
+                <td>@movie.Producer?.Name</td>
+                <td>
+                    @foreach (Genre genre in movie.Genres)
+                    {
+                        <p>@genre.Title</p>
+                        <a asp-controller="Movies" asp-action="Remove" asp-route-directorId="@movie.DirectorId" asp-route-movieId="@movie.Id" asp-route-genreId="@genre.Id">Remove</a>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>

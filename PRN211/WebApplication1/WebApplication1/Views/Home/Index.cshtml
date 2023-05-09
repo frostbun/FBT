@@ -1,0 +1,11 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+Question @ViewBag.Question.Id: @ViewBag.Question.Title
+<form asp-controller="Home" asp-action="Index" asp-route-id="@ViewBag.NextId" method="get">
+    <input type="radio" name="answer" value="A" /> A. @ViewBag.Question.A <br>
+    <input type="radio" name="answer" value="B" /> B. @ViewBag.Question.B <br>
+    <input type="radio" name="answer" value="C" /> C. @ViewBag.Question.C <br>
+    <input type="radio" name="answer" value="D" /> D. @ViewBag.Question.D <br>
+    <button>Next</button>
+</form> 
+<button><a asp-controller="Home" asp-action="Submit">Submit</a></button>
