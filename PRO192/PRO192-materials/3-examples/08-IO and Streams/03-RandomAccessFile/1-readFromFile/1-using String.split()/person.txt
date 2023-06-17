@@ -1,0 +1,4 @@
+Tran Hung  | 21  | 400
+Thu Lan    | 20  | 500
+Nguyen Hoa | 23  | 450
+ 

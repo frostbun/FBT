@@ -1,0 +1,17 @@
+Download and install Java&NetBean
+http://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-142931.html
+
+Java multiple choice questions and answers:
+http://www.sanfoundry.com/java-questions-answers-freshers-experienced/
+
+Java tutorial:
+https://docs.oracle.com/javase/tutorial/
+
+data type and java platform:
+http://www.tutorialspoint.com/java/java_basic_datatypes.htm
+
+java.util.Collections:
+http://www.tutorialspoint.com/java/util/java_util_collections.htm
+
+java.util.ArrayList:
+http://www.tutorialspoint.com/java/util/java_util_arraylist.htm

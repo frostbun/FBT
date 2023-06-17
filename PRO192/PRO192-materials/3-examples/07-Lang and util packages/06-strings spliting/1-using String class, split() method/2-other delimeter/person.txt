@@ -1,0 +1,3 @@
+Tran Hoa  |  21  |  500
+Nguyen La |  20  |  450
+Thu Canh  |  22  |  600

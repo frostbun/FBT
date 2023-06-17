@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link href="../../../fonts/css/font-awesome.min.css" rel="stylesheet" /><link href="../../../Content/font-face.css" rel="stylesheet" /><link href="../../../Content/bootstrap.min.css" rel="stylesheet" /><link href="../../../Content/common.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style2 {
+            width: 155px;
+        }
+
+        .auto-style3 {
+            width: 155px;
+            height: 24px;
+        }
+        /*Table*/
+        #gvSubs, #table-detail, #gvMaterial, #gvLO, #gvSchedule, #gvAssessment {
+            border: 1px solid rgba(0,0,0,.05);
+        }
+
+            #gvSubs th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+            #gvMaterial th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+            #gvLO th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+            #gvSchedule th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+            #gvAssessment th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+        .table-detail tr td {
+            padding: 6px 10px 6px 10px;
+        }
+        /*Table*/
+        #gvPLO {
+            border: 1px solid rgba(0,0,0,.05);
+        }
+
+            #gvPLO th {
+                font-weight: bold;
+                background-color: #F2994A;
+                color: white;
+            }
+
+        .table-top {
+            border-collapse: separate;
+            border-spacing: 0 0.5em;
+        }
+
+        .plo, table {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            .plo td, #customers th {
+                border: 1px solid rgba(0,0,0,.05);
+                padding: 8px;
+            }
+
+            .plo tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            .plo tr:hover {
+                background-color: #ddd;
+            }
+
+            .plo th {
+                border: 1px solid rgba(0,0,0,.05);
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 6px;
+                padding-right: 6px;
+                text-align: center;
+                background-color: #F2994A;
+                color: white;
+                font-weight: bold;
+            }
+
+            .plo td {
+                text-align: center;
+            }
+
+        .textRedBold {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+<title>
+	FPT University Learning Materials
+</title></head>
+<body style="padding: 10px; font-family: Roboto, sans-serif">
+    <form method="post" action="./SyllabusDetails?sylID=3421" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="099A42EB" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="gG2E2Ywo6Lq2W0XTdzWCdYQwVwT7ZH1IUMe6KtpplO8B3g8UvVlUC2TkLbrPK5TdtL/Ioh9zlJ30jVN39TxmtwBlN37ptPeRT5xAgk9a9+RVdOmSKZhozKqTru4UZ66kRx1LfZv2z4HNKmxXd2X5I2J4yFISpNcrsjR+h7NJ7PC9qpvs9RmGbcGQ6K+/x3t899xuPsqJTmOv7jL0AO8y5pfYCKjQ9bnROIT1koH0LMhu/lfuKbs4orIs6VJy7TctWGFAE90PFcu9i279E1ZJmuKPac5mU2LAFFvrdFbVdZISXq7FMgXOELxi39CAhuFpIujf1s2mDoaDA4lNrokio0oBplJvxJ2ge9OhNn1bSes=" />
+</div>
+        <div>
+            <h2>
+                <a id="hpHome" class="btn btn-warning btn-normal mb-2" href="../../Home.aspx"><i class="fa fa-home fa-lg" aria-hidden="true"></i><span> Home</span></a>
+            </h2>
+            <h2 class="mb-4">Syllabus Details</h2>
+            
+            
+            <table id="table-detail" class="table-detail" cellspacing="0" rules="all" border="1" style="border-collapse: collapse; width: 100%;">
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Syllabus ID:</td>
+                    <td class="auto-style6">
+                        <span id="lblSyllabusID">3421</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right; table-layout: auto;">Syllabus Name:</td>
+                    <td class="auto-style4">
+                        <span id="lblSyllabusName" style="font-weight:bold;">Object-Oriented Programming using Java</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Subject Code:</td>
+                    <td class="auto-style6">
+                        <span id="lblSubjectCode" style="font-weight:bold;">PRO192</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">NoCredit:</td>
+                    <td class="auto-style6">
+                        <span id="lblNoCredit">3</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Degree Level:</td>
+                    <td class="auto-style6">
+                        <span id="lblDegreeLevel">Bachelor</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Time Allocation:</td>
+                    <td class="auto-style6">
+                        <span id="lblTimeAllocation">Class hours: 30 slots - 1slot =90'<br/>     Lectures:    15 slots<br/>     Tutorials:    15 slots<br/>Home study:    60 slots </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Pre-Requisite:</td>
+                    <td class="auto-style6">
+                        <span id="lblPreRequisite">PRF192</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Description:</td>
+                    <td class="auto-style6">
+                        <span id="lblDescription">-This subject introduces the student to object-oriented programming. The student learns to build reusable objects, encapsulate data and logic within a class, inherit one class from another and implement polymorphism.<br/>- Compose technical documentation of a Java program using internal comments <br/>- Adhere to object-oriented programming principles including encapsulation, polymorphism and inheritance when writing program code <br/>- Trace the execution of Java program logic to determine what a program does or to validate the correctness of a program  </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">StudentTasks:</td>
+                    <td class="auto-style6">
+                        <span id="lblStudentTask">- Students must attend at least 80% of contact slots in order to be accepted to the final examination.<br/>- Student is responsible to do all exercises given by instructor in class or at home and submit on time.<br/>- Use laptop in class only for learning purpose <br/>- Promptly access to the FU CMS at http://cms.fpt.edu.vn for up-to-date course information</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Tools:</td>
+                    <td class="auto-style6">
+                        <span id="lblTools">Text Book<br/>'NetBean x.x<br/>Internet</span>
+                    </td>
+                </tr>
+                <tr id="trScoringScale">
+	<td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Scoring Scale:</td>
+	<td class="auto-style6">
+                        <span id="lblScoringScale">10</span>
+                    </td>
+</tr>
+
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">DecisionNo: </td>
+                    <td class="auto-style6">
+                        <span id="lblDecisionNo">378/QĐ-ĐHFPT dated 02/04/2021</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">IsApproved:</td>
+                    <td class="auto-style6">
+                        <span id="lblIsApproved" style="font-weight:bold;">True</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Note:</td>
+                    <td class="auto-style6">
+                        <span id="lblNote"></span>
+                    </td>
+                </tr>
+                <tr id="trMinAvgMarkToPass">
+	<td class="auto-style3" align="right" style="text-align: right; table-layout: auto;">MinAvgMarkToPass:</td>
+	<td class="auto-style4">
+                        <span id="lblMinAvgMarkToPass">5</span>
+                    </td>
+</tr>
+
+                <tr>
+                    <td class="auto-style3" align="right" style="text-align: right; table-layout: auto;">IsActive:</td>
+                    <td class="auto-style4">
+                        <span id="lblIsActive">True</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="right" style="text-align: right; table-layout: auto;">Approved Date:</td>
+                    <td class="auto-style6">
+                        <span id="lblApprovedDate">4/2/2021</span>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <span id="lblMessageMat" style="color:#23AC68;">4 material(s)</span>
+
+            <br />
+            <div>
+	<table class="table table-striped" cellspacing="0" rules="all" border="1" id="gvMaterial" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">MaterialDescription</th><th scope="col">IsMainMaterial</th><th scope="col">ISBN</th><th scope="col">IsHardCopy</th><th scope="col">IsOnline</th><th scope="col">Note</th><th scope="col">Author</th><th scope="col">Publisher</th><th scope="col">PublishedDate</th><th scope="col">Edition</th>
+		</tr><tr>
+			<td>Object-Oriented Programming using Java</td><td><span class="aspNetDisabled" title="IsMainMaterial"><input id="gvMaterial_ctl00_0" type="checkbox" name="gvMaterial$ctl02$ctl00" disabled="disabled" /></span></td><td>                                                                                                    </td><td><span class="aspNetDisabled" title="IsHardCopy"><input id="gvMaterial_ctl01_0" type="checkbox" name="gvMaterial$ctl02$ctl01" disabled="disabled" /></span></td><td><span class="aspNetDisabled" title="IsOnline"><input id="gvMaterial_ctl02_0" type="checkbox" name="gvMaterial$ctl02$ctl02" disabled="disabled" /></span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Java 8 Specification
+https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-1.html#jvms-1.1</td><td><span class="aspNetDisabled" title="IsMainMaterial"><input id="gvMaterial_ctl00_1" type="checkbox" name="gvMaterial$ctl03$ctl00" disabled="disabled" /></span></td><td>                                                                                                    </td><td><span class="aspNetDisabled" title="IsHardCopy"><input id="gvMaterial_ctl01_1" type="checkbox" name="gvMaterial$ctl03$ctl01" disabled="disabled" /></span></td><td><span class="aspNetDisabled" title="IsOnline"><input id="gvMaterial_ctl02_1" type="checkbox" name="gvMaterial$ctl03$ctl02" disabled="disabled" /></span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Course slide</td><td><span class="aspNetDisabled" title="IsMainMaterial"><input id="gvMaterial_ctl00_2" type="checkbox" name="gvMaterial$ctl04$ctl00" disabled="disabled" /></span></td><td>                                                                                                    </td><td><span class="aspNetDisabled" title="IsHardCopy"><input id="gvMaterial_ctl01_2" type="checkbox" name="gvMaterial$ctl04$ctl01" disabled="disabled" /></span></td><td><span class="aspNetDisabled" title="IsOnline"><input id="gvMaterial_ctl02_2" type="checkbox" name="gvMaterial$ctl04$ctl02" disabled="disabled" /></span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Labs &amp; assignment</td><td><span class="aspNetDisabled" title="IsMainMaterial"><input id="gvMaterial_ctl00_3" type="checkbox" name="gvMaterial$ctl05$ctl00" disabled="disabled" /></span></td><td>                                                                                                    </td><td><span class="aspNetDisabled" title="IsHardCopy"><input id="gvMaterial_ctl01_3" type="checkbox" name="gvMaterial$ctl05$ctl01" disabled="disabled" /></span></td><td><span class="aspNetDisabled" title="IsOnline"><input id="gvMaterial_ctl02_3" type="checkbox" name="gvMaterial$ctl05$ctl02" disabled="disabled" /></span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+            <br />
+            <span id="lblMessageLO" style="color:#23AC68;">0 LO(s)</span>
+
+            <div>
+
+</div>
+            <br />
+            
+            <br />
+            <button class="margin-bot-10 btn btn-primary btn-blue ml-1" id="btnDownloadAllTeacherMaterial">Download All Teacher Material</button>
+            <button class="margin-bot-10 btn btn-primary btn-blue ml-1" id="btnDownloadAllStudentMaterial">Download All Student Material</button>
+            <span id="lblMessageSche" style="color:#23AC68;">26 sessions (90'/session)</span>
+
+            <div>
+	<table class="table table-striped" cellspacing="0" rules="all" border="1" id="gvSchedule" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">SessionNo</th><th scope="col">Topic</th><th scope="col">LO</th><th scope="col">ITU</th><th scope="col">StudentMaterials</th><th scope="col">S-Download</th><th scope="col">TeacherMaterials</th><th scope="col">T-Download</th><th scope="col">Activity</th><th scope="col">URLs</th><th scope="col">LecturerTasks</th>
+		</tr><tr>
+			<td>1</td><td>Introduction:<br/>1.1 Welcome to Object-Oriented<br/>1.2 Object Terminology</td><td>LO1</td><td>I</td><td>Textbook, slides</td><td><a class="ContainSLink" href="../../../download/3421/S/1_PRO192.zip">PRO192</a></td><td>Textbook, slides</td><td><a class="ContainTLink" href="../../../download/3421/T/1_PRO192.zip">PRO192</a></td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>2</td><td>Foundations:<br/>2.1 basic Java language: variable, operators, array and logic instructions</td><td>LO2</td><td>IT</td><td>Textbook, slides</td><td><a class="ContainSLink" href="../../../download/3421/S/2_PRO192.zip">PRO192</a></td><td>Textbook, slides</td><td><a class="ContainTLink" href="../../../download/3421/T/2_PRO192.zip">PRO192</a></td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>3</td><td>2.2 Input and Output (Standard I/O)</td><td>LO3</td><td>I,T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>4</td><td>Lab 1 assistance</td><td>LO2,LO3</td><td>U</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>5</td><td>Foundations:<br/>2.3 Exception<br/>2.4 Dynamic Memory</td><td>LO4</td><td>I,T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>6</td><td>Lab 2 assistance</td><td>LO3,LO4</td><td>U</td><td>Textbook, slides, lab&#39;s questions</td><td>&nbsp;</td><td>Textbook, slides, lab&#39;s questions</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>7</td><td>Encapsulation<br/>3.1 Classes<br/>3.2 Construction<br/>3.3 The current object</td><td>LO5</td><td>I, T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>8</td><td>3.4 Member functions<br/>3.5 Access modifier</td><td>LO5,LO6</td><td>I, T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>9</td><td>Lab 2 assistance</td><td>LO5,LO6</td><td>U</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>10</td><td>Inheritance:<br/>4.1 Derived Classes</td><td>LO5,LO6</td><td>I, T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>11</td><td>4.2 Functions in a Hierarchy</td><td>LO5,LO6</td><td>I,T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>12</td><td>Lab 3 assistance</td><td>LO5,LO6</td><td>U</td><td>&nbsp;</td><td>&nbsp;</td><td>&#39;Textbook, slides, lab&#39;s questions</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>13</td><td>Polymorphism:<br/>5.1 Abstract class</td><td>LO7</td><td>I,T</td><td>Textbook, slides,assignment&#39;s questions</td><td>&nbsp;</td><td>Textbook, slides,assignment&#39;s questions</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>14</td><td>5.2 Interface</td><td>LO7</td><td>I,T</td><td>Textbook, slides,assignment&#39;s questions</td><td>&nbsp;</td><td>Textbook, slides,assignment&#39;s questions</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>15</td><td>5.3 Overview of Polymorphism(overloading, overriding)</td><td>LO7</td><td>I,T</td><td>Textbook, slides,assignment&#39;s questions</td><td>&nbsp;</td><td>Textbook, slides,assignment&#39;s questions</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>16</td><td>Lab 4 assistance</td><td>LO7</td><td>U</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>17</td><td>Progress test 1+ workshop evaluation</td><td>LO1,LO2,LO3,LO4,LO5,LO6,LO7</td><td>U</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>22</td><td>Lab 5 assistance</td><td>LO4,LO5,LO6,LO7</td><td>U</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>23</td><td>Collections in Java:<br/>7.1 Overview<br/>7.2 List</td><td>LO9</td><td>I,T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>24</td><td>7.3 Set</td><td>LO9</td><td>I,T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>25</td><td>7.4 Map</td><td>LO9</td><td>I,T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>Study materials, redo sample examples</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>26</td><td>Lab 6 assistance</td><td>LO9</td><td>T,U</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>27</td><td>Progress test 2+ workshop evaluation</td><td>LO8, LO9</td><td>U</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>28</td><td>Review</td><td>LO1,LO2,LO3,LO4,LO5,LO6,<br/>LO7,LO8,LO9</td><td>I,T</td><td>Textbook, slides</td><td>&nbsp;</td><td>Textbook, slides</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>29</td><td>Assignment Evaluation</td><td>&nbsp;</td><td>U</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>30</td><td>Practical Exam</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+		</tr>
+	</table>
+</div>
+            <br />
+            <span id="lblMessageAsse" style="color:#23AC68;">5 assessment(s)</span>
+
+            <div>
+	<table class="table table-striped" cellspacing="0" rules="all" border="1" id="gvAssessment" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">Category</th><th scope="col">Type</th><th scope="col">Part</th><th scope="col">Weight</th><th scope="col">Completion Criteria</th><th scope="col">Duration</th><th scope="col">LO</th><th scope="col">Question Type</th><th scope="col">No Question</th><th scope="col">Knowledge and Skill</th><th scope="col">Grading Guide</th><th scope="col">Note</th>
+		</tr><tr>
+			<td>Progress Test</td><td>on-going</td><td>2</td><td>10</td><td>1E-05</td><td>30&#39;/each</td><td>Test 1: LO1, LO2, LO3<br/>Test 2: LO4, LO5, LO6</td><td>Option 1: Multiple choices<br/>Marked by Computer or a suitable format<br/>Option 2: Questions or Activities proposed by lecturer<br/></td><td>Option 1: 20/each<br/>Option 2: Follow lecturer&#39;s proposal</td><td>&nbsp;</td><td>in class, by LMS system</td><td>Instruction and schedules for Progress Tests must be presented in the Course Implementation Plan approved by director of the campus. <br/>Progress test must be taken right after the last lectures of required material. <br/>Instructor has responsibility to review the test for students after graded.<br/></td>
+		</tr><tr>
+			<td>Assignment</td><td>on-going</td><td>1</td><td>20</td><td>1E-05</td><td>28 slots</td><td>LO1-&gt;LO9</td><td>Option 1: N/A<br/>Option 2: Questions or Activities proposed by lecturer</td><td>Option 1: N/A<br/>Option 2: Follow lecturer&#39;s proposal</td><td>All subjects in syllabus</td><td>in class, by teacher</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Lab</td><td>on-going</td><td>6</td><td>10</td><td>1E-05</td><td>90&#39;/each</td><td>LO1-&gt;LO9</td><td>Option 1: N/A<br/>Option 2: Questions or Activities proposed by lecturer</td><td>Option 1: N/A<br/>Option 2: Follow lecturer&#39;s proposal</td><td>&nbsp;</td><td>in class, by teacher</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Practical Exam</td><td>on-going</td><td>1</td><td>30</td><td>1E-05</td><td>90&#39;/each</td><td>LO1-&gt;LO9</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>in class, by teacher</td><td>&nbsp;</td>
+		</tr><tr>
+			<td>Final Exam</td><td>final exam</td><td>1</td><td>30</td><td>4</td><td>60&#39;/each</td><td>LO1-&gt;LO9</td><td>Multiple choices<br/>Marked by Computer<br/></td><td>50</td><td>All subjects in syllabus</td><td>By Exam Board</td><td>The exam questions must be updated or different at least 70% to the previous ones.</td>
+		</tr>
+	</table>
+</div>
+            <br />
+
+        </div>
+    </form>
+</body>
+<script src="/bundles/customjs"></script>
+<script>
+    $(document).ready(() => {
+        if ($("tbody tr a.ContainSLink").toArray().length == 0) {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllStudentMaterial").prop("disabled", false);
+        }
+
+        if ($("tbody tr a.ContainTLink").toArray().length == 0) {
+            $("#btnDownloadAllTeacherMaterial").prop("disabled", true);
+        } else {
+            $("#btnDownloadAllTeacherMaterial").prop("disabled", false);
+        }
+    })
+    function downloadLoop(i, urls) {
+        setTimeout(() => {
+            urls[i].click();
+            i++;
+            if (i < urls.length) {
+                downloadLoop(i, urls);
+            }
+        }, 10456)
+    }
+    $('#btnDownloadAllTeacherMaterial').on('click', function (e) {
+        e.preventDefault();
+        let downloadLinks = $("tbody tr a.ContainTLink").toArray();
+        let result = confirm("Do you want to download all materials?");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    })
+    $('#btnDownloadAllStudentMaterial').on('click', function (e) {
+        e.preventDefault();
+        let downloadLinks = $("tbody tr a.ContainSLink").toArray();
+        let result = confirm("Do you want to download all materials??");
+        if (result) {
+            downloadLoop(0, downloadLinks);
+        }
+    })
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+</html>

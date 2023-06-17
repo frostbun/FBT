@@ -1,0 +1,24 @@
+CREATE TABLE Teams(
+	TeamCode		VARCHAR(15)		PRIMARY KEY,
+	Name			NVARCHAR(50),
+	Address			NVARCHAR(200)
+)
+
+CREATE TABLE Games(
+	GameCode		VARCHAR(15)		PRIMARY KEY,
+	Date			DATE,
+	Time			TIME
+)
+
+CREATE TABLE Players(
+	SSN				VARCHAR(15)		PRIMARY KEY,
+	Name			NVARCHAR(100),
+	TeamCode		VARCHAR(15)		FOREIGN KEY REFERENCES Teams(TeamCode)
+)
+
+CREATE TABLE Participate(
+	TeamCode		VARCHAR(15)		FOREIGN KEY REFERENCES Teams(TeamCode),
+	GameCode		VARCHAR(15)		FOREIGN KEY REFERENCES Games(GameCode),
+	Result			INT,
+	PRIMARY KEY (TeamCode, GameCode)
+)
